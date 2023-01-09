@@ -1,7 +1,7 @@
 
 # ¿De donde saco la info? -------------------------------------------------
 
-
+# Bien comentado 
 
 url_="https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/EstacionesTerrestres/"
 
