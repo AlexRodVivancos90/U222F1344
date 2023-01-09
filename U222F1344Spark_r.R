@@ -58,7 +58,7 @@ ds_precio_promedio_ccaa <-ds_lowcost %>% select(precio_gasoleo_a, precio_gasoleo
 
 mas_baratas= ds_lowcost[ ds_lowcost$low_cost,] 
 mas_baratas=mas_baratas[order(mas_baratas$precio_gasolina_98_e5,decreasing = FALSE),]
-top_20_baratas = mas_baratas[1:20,]
+top_20_baratas = mas_baratas[1:20,] %>% view()
 # Uso correcto de selección de rangos 
 top_20_baratas %>% leaflet() %>% addTiles() %>% addCircleMarkers(lng = ~longitud_wgs84,lat = ~latitud )
 
@@ -176,6 +176,7 @@ pob_def <-pob21 %>% select(NOMBRE,POB21) %>% clean_names() %>% rename(municipio 
 # tras hacer esto, aprovechamos para juntar este nuevo ds con el que hemos usado durante todo el ejercicio usando como campo de unión la variable municipio
 poblacio_final <-inner_join(ds_lowcost,pob_def, by="municipio")
 
+# REv. finalizada
 
 
 
