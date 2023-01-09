@@ -59,6 +59,7 @@ ds_precio_promedio_ccaa <-ds_lowcost %>% select(precio_gasoleo_a, precio_gasoleo
 mas_baratas= ds_lowcost[ ds_lowcost$low_cost,] 
 mas_baratas=mas_baratas[order(mas_baratas$precio_gasolina_98_e5,decreasing = FALSE),]
 top_20_baratas = mas_baratas[1:20,]
+# Uso correcto de selección de rangos 
 top_20_baratas %>% leaflet() %>% addTiles() %>% addCircleMarkers(lng = ~longitud_wgs84,lat = ~latitud )
 
 
